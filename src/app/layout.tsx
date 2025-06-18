@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Provider } from '@/components/ui/provider';
+import { Provider } from '@/ui/provider';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import React from 'react';

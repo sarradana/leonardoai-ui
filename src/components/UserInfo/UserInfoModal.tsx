@@ -109,11 +109,11 @@ const UserInfoModal: React.FC<Props> = ({ open, onClose, onSave, initialInfo }) 
                 autoFocus
               />
               {usernameError && (
-                <FormErrorMessage id="username-error">{usernameError}</FormErrorMessage>
+                <FormErrorMessage color={"red"}  id="username-error">{usernameError}</FormErrorMessage>
               )}
             </FormControl>
             <FormControl isInvalid={!!jobTitleError} mb={4}>
-              <FormLabel htmlFor="jobTitle">Job Title</FormLabel>
+              <FormLabel htmlFor="jobTitle">Job Title*</FormLabel>
               <Input
                 id="jobTitle"
                 aria-required="true"
@@ -122,7 +122,7 @@ const UserInfoModal: React.FC<Props> = ({ open, onClose, onSave, initialInfo }) 
                 onChange={(e) => setJobTitle(e.target.value)}
               />
               {jobTitleError && (
-                <FormErrorMessage id="jobTitle-error">{jobTitleError}</FormErrorMessage>
+                <FormErrorMessage color={"red"} id="jobTitle-error">{jobTitleError}</FormErrorMessage>
               )}
             </FormControl>
           </ModalBody>
