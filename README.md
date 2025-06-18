@@ -14,23 +14,39 @@ pnpm dev
 bun dev
 ```
 
+to run the unit tests run 
+```bash
+npm run test
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About the Project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project is a modern web application built with **Next.js** (App Router) and **Chakra UI** for styling. It leverages **TypeScript** for type safety and **Jest** for testing. Key highlights include:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Static Site Generation (SSG)** for the Home page for fast, cacheable loads
+- **Server-Side Rendering (SSR)** for the Information page to keep data fresh
+- **User Info Modal**: Edit and view user information with React Context for state management
+- **Responsive Design**: Mobile-friendly layout using Chakra UI components
+- **GraphQL Integration**: Uses Apollo Client for data fetching (see `/src/lib/apollo-client.js`)
+- **Testing**: Unit tests with Jest and React Testing Library
+- **Accessibility**: Focus on semantic HTML and accessible components
+- **Folder Structure**: Organized by feature and component for scalability
 
-## Learn More
+## Future improvements
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If I had more time, I would’ve made the following improvements:
+- Resolve **modal styling** issues and improve the header/footer styling
+- Implement more comprehensive error handling using **Next.js** error components
+- Increase test coverage and fix existing failing tests
+- Fix **Chakra UI** styling issues and apply proper conventions (couldn't do it due to limited familiarity)
+- Rename some components for improved clarity and descriptiveness
+- Restructure component files into dedicated directories
+- Integrate **Storybook** for component documentation and testing
+- Clean up `package.json` and remove unused dependencies
+- Add end-to-end testing with **Cypress** or **Playwright**
+- Improve accessibility features and ensure compliance with WCAG standards
+- Move the api endpoints url to an env file
+- Moving all the typescript type definitions to type.ts files to keep the code clean
+- add some Jsdoc for pagination and some other utility functions
+- I create a utility function to return the current version instead of importing the `package.json` file to layout.tsx
